@@ -67,7 +67,7 @@ Enable social sharing, leaderboard, or live streaming features.
 
 📸 Demo
 
-[My Roast](THE_FINAL_ROAST_1758460926.jpg)
+![My Roast](THE_FINAL_ROAST_1758460926.jpg)
 
 
 📝 License
