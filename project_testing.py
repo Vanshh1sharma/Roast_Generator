@@ -15,7 +15,7 @@ def mood(user_input):
             "Your smile is brighter than your future—good luck with that.",
             "You're proof that caffeine can walk and talk.",
             "Your vibe is so high, even Wi-Fi signals get jealous.",
-            "You laugh like life’s a joke. It is — you’re the punchline."
+            "You laugh like life’s a joke. It's — you’re the punchline."
         ],
         "sad": [
             "You're not unlucky—just consistently bad at everything.",
@@ -37,10 +37,10 @@ def mood(user_input):
 # Load cascades
 # -------------------
 face_cascade = cv2.CascadeClassifier(
-    r"C:\Users\vansh\OneDrive\Desktop\Project\Roast generator\Prototypes\Prototype_2\haarcascade_frontalface_alt.xml"
+    r"C:\Users\vansh\OneDrive\Desktop\Project\Roast generator\Final_project\Roast_Generator\haarcascade_frontalface_alt.xml"
 )
 smile_cascade = cv2.CascadeClassifier(
-    r"C:\Users\vansh\OneDrive\Desktop\Project\Roast generator\Prototypes\Prototype_2\haarcascade_smile.xml"
+    r"C:\Users\vansh\OneDrive\Desktop\Project\Roast generator\Final_project\Roast_Generator\haarcascade_smile.xml"
 )
 
 cap = cv2.VideoCapture(0)
@@ -61,7 +61,7 @@ while True:
     for (x, y, w, h) in faces:
         roi_gray = gray[y:y+h, x:x+w]
 
-        smiles = smile_cascade.detectMultiScale(roi_gray, scaleFactor=1.7, minNeighbors=20)
+        smiles = smile_cascade.detectMultiScale(roi_gray, scaleFactor=1.3, minNeighbors=8)
 
         if len(smiles) > 0:
             mood_detected = "happy"
